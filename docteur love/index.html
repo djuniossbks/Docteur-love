@@ -1,274 +1,312 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Djunioss bks alias Docteur Love</title>
-    <style>
-        :root {
-            --primary: #ff4d6d;
-            --secondary: #ff85a1;
-            --accent: #ff3366;
-            --light: #fff0f5;
-            --dark: #4b1c2f;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Djunioss bks alias Docteur Love</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #ff4d6d;
+      --secondary: #ff85a1;
+      --accent: #ff3366;
+      --light: #fff0f5;
+      --dark: #4b1c2f;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        body {
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-            overflow-x: hidden;
-        }
+    body {
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: var(--light);
+      overflow-x: hidden;
+    }
 
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
 
-        .logo span {
-            color: var(--light);
-        }
+    /* Menu PC */
+    .menu-toggle {
+      display: none;
+    }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
 
-        nav ul li {
-            margin-left: 1.5rem;
-        }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+    nav ul li a:hover {
+      color: #ffe066;
+    }
 
-        nav ul li a:hover {
-            color: #ffe066;
-        }
+    /* --- Responsive Mobile --- */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        font-size: 1.8rem;
+        color: white;
+        cursor: pointer;
+      }
 
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--primary);
+        width: 200px;
+        padding: 1rem;
+        display: none;
+      }
 
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: typing 4s steps(40, end), blink 0.7s infinite;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 4px solid #fff;
-            width: 22ch;
-            margin: auto;
-        }
+      nav ul.active {
+        display: flex;
+      }
 
-        @keyframes typing {
-            from { width: 0; }
-        }
+      nav ul li {
+        margin: 1rem 0;
+      }
+    }
 
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                  url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+   /* ... (conservez tout le CSS existant jusqu'à .hero-content h1) ... */
 
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: white;
-            padding: 0.8rem 1.8rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            animation: heartbeat 1.5s infinite;
-        }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      animation: none; /* Désactivé par défaut */
+    }
 
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
+    /* Animation seulement sur grand écran */
+    @media (min-width: 769px) {
+      .hero-content h1 {
+        animation: typing 4s steps(40, end), blink 0.7s infinite;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 4px solid #fff;
+        width: 22ch;
+        margin: auto;
+      }
+    }
 
-        .btn:hover {
-            background-color: var(--secondary);
-        }
+    @keyframes typing { from { width: 0; } }
+    @keyframes blink { 50% { border-color: transparent; } }
 
-        .about {
-            padding: 5rem 0;
-            background-color: white;
-        }
+    /* Ajustements mobile */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+        white-space: normal;
+        border-right: none;
+        width: auto;
+      }
+      
+      .hero-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+      
+      .hero {
+        height: 60vh;
+      }
+    }
 
-        .about-content, .tips-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            align-items: center;
-        }
+    /* ... (conservez le reste du CSS existant) ... */
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        .about-text h2, .tips h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+      animation: heartbeat 1.5s infinite;
+    }
 
-        .about-text p {
-            margin-bottom: 1rem;
-        }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
 
-        .card {
-            background: #fff;
-            border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
+    .btn:hover {
+      background-color: var(--secondary);
+    }
 
-        .card:hover {
-            transform: translateY(-8px);
-        }
+    /* Sections */
+    .about, .tips, .contact {
+      padding: 5rem 0;
+    }
 
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
+    .about-content, .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      align-items: center;
+    }
 
-        .tips {
-            padding: 5rem 0;
-            background: var(--light);
-        }
+    .about-text h2, .tips h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
 
-        .contact {
-            padding: 5rem 0;
-            background-color: var(--light);
-            text-align: center;
-        }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
 
-        .social-links {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
+    .card:hover {
+      transform: translateY(-8px);
+    }
 
-        .social-links a {
-            font-size: 2rem;
-            color: var(--accent);
-            transition: 0.3s;
-        }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
 
-        .social-links a:hover {
-            color: var(--secondary);
-        }
+    .social-links {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
 
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
 
-        footer p {
-            margin: 0.5rem 0;
-        }
+    /* Cœurs flottants */
+    .floating-hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
 
-        .floating-hearts {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
+    .heart-emoji {
+      position: absolute;
+      font-size: 20px;
+      animation: float 10s linear infinite;
+      opacity: 0;
+    }
 
-        .heart-emoji {
-            position: absolute;
-            font-size: 20px;
-            animation: float 10s linear infinite;
-            opacity: 0;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) scale(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-20vh) scale(1.5); opacity: 0; }
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-20vh) scale(1.5); opacity: 0; }
+    }
+  </style>
 </head>
 <body>
-    <div class="floating-hearts" id="hearts-container"></div>
+  <div class="floating-hearts" id="hearts-container"></div>
 
-    <header>
-        <div class="container header-content">
-            <a href="#" class="logo">Dr <span>Love</span></a>
-            <nav>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#tips">Astuces Couples</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="container header-content">
+      <a href="#" class="logo">Dr <span>Love</span></a>
+      <nav>
+        <i class="fas fa-bars menu-toggle" id="menu-toggle"></i>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#tips">Astuces Couples</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero" id="accueil">
+  <section class="hero" id="accueil">
+    <div class="container hero-content">
+      <div>
+        <h1>Docteur Love est là 💘</h1>
+        <p>Je soigne les cœurs brisés, je crée des sourires, et je répands l’amour comme une pluie de confettis 🌈🎉</p>
+        <a href="#contact" class="btn">💌 Me contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- reste du contenu identique (about, tips, contact, footer) -->
+  
+  <section class="hero" id="accueil">
         <div class="container hero-content">
             <div>
                 <h1>Docteur Love est là 💘</h1>
@@ -282,9 +320,9 @@
         <div class="container about-content">
             <div class="about-text">
                 <h2>À propos de moi</h2>
-               <h3> <p>Salut, moi c’est <strong>Djunioss bks</strong>, alias <strong>Docteur Love</strong> 💘.</p>
+                <h3><p>Salut, moi c’est <strong>Djunioss bks</strong>, alias <strong>Docteur Love</strong> 💘.</p>
                 <p>Mon job ? Répandre des sourires, des papillons dans le ventre et une overdose d’amour romantique 🌹.</p>
-                <p>Ma devise : « Moins de drama, plus de câlins » 😍.</p> </h3>
+                <p>Ma devise : « Moins de drama, plus de câlins » 😍.</p></h3>
             </div>
            
         </div>
@@ -315,7 +353,7 @@
                     <p>Des phrases sucrées à offrir sans modération 🍯 « Tu es ma wifi, sans toi je capte rien » 😂.</p>
                 </div>
                 <div class="card">
-                    <img src="415829-PEE99Q-940.jpg" alt="Demande en mariage">
+                    <img src="docteur love/415829-PEE99Q-940.jpg" alt="Demande en mariage">
                     <h3>Demande en mariage</h3>
                     <p>Du fun, du romantisme, et un genou à terre 💍✨. Oui, elle dira OUI !</p>
                 </div>
@@ -330,7 +368,7 @@
                     <p>Les papillons reviennent quand on ose surprendre son/sa partenaire ✨.</p>
                 </div>
                 <div class="card">
-                    <img src="8xsy8-2230421.jpg" alt="Petites attentions">
+                    <img src="docteur love/8xis_dsy8_230421.jpg" alt="Petites attentions">
                     <h3>Petites attentions</h3>
                     <p>Un mot doux sur l’oreiller, une blague le matin, ça change tout 💕.</p>
                 </div>
@@ -353,27 +391,37 @@
             </div>
         </div>
     </section>
+  
 
-    <footer>
-        <p>&copy; 2025 Djunioss bks alias Docteur Love. Tout l’amour est gratuit 💕</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Djunioss bks alias Docteur Love. Tout l’amour est gratuit 💕</p>
+  </footer>
 
-    <script>
-        function createHearts() {
-            const container = document.getElementById('hearts-container');
-            const hearts = ['❤️','💖','💗','💓','💞','💕','💘','💝'];
-            for (let i=0; i<40; i++){
-                const heart = document.createElement('div');
-                heart.className='heart-emoji';
-                heart.textContent=hearts[Math.floor(Math.random()*hearts.length)];
-                heart.style.left=Math.random()*100+'vw';
-                heart.style.animationDuration=5+Math.random()*15+'s';
-                heart.style.animationDelay=Math.random()*5+'s';
-                heart.style.fontSize=(15+Math.random()*30)+'px';
-                container.appendChild(heart);
-            }
-        }
-        window.onload = createHearts;
-    </script>
+  <script>
+    // Menu burger
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Animation des coeurs
+    function createHearts() {
+      const container = document.getElementById('hearts-container');
+      const hearts = ['❤️','💖','💗','💓','💞','💕','💘','💝'];
+      for (let i=0; i<40; i++){
+        const heart = document.createElement('div');
+        heart.className='heart-emoji';
+        heart.textContent=hearts[Math.floor(Math.random()*hearts.length)];
+        heart.style.left=Math.random()*100+'vw';
+        heart.style.animationDuration=5+Math.random()*15+'s';
+        heart.style.animationDelay=Math.random()*5+'s';
+        heart.style.fontSize=(15+Math.random()*30)+'px';
+        container.appendChild(heart);
+      }
+    }
+    window.onload = createHearts;
+  </script>
 </body>
 </html>
