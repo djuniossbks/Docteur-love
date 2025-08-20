@@ -1,0 +1,11 @@
+
+@import url('../style.css');
+.back{position:fixed;top:12px;left:12px;text-decoration:none}
+.wrap{max-width:720px;margin:80px auto;padding:22px;background:#fff;border-radius:20px;box-shadow:var(--shadow);text-align:center}
+.wheel{
+  --size:280px;width:var(--size);height:var(--size);margin:16px auto;border-radius:50%;
+  background:conic-gradient(#ffd1e6 0 16.7%, #ffecf5 0 33.4%, #ffd1e6 0 50.1%, #ffecf5 0 66.8%, #ffd1e6 0 83.5%, #ffecf5 0 100%);
+  border:8px solid white; box-shadow:var(--shadow); position:relative; transition:transform 3.2s cubic-bezier(.2,.9,.2,1.2);
+}
+.wheel::after{content:'';position:absolute;top:-18px;left:50%;transform:translateX(-50%);border:12px solid transparent;border-bottom-color:var(--red)}
+.result{margin-top:16px;font-weight:700}

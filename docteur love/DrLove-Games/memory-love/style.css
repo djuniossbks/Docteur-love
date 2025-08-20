@@ -1,0 +1,13 @@
+
+@import url('../style.css');
+.back{position:fixed;top:12px;left:12px;text-decoration:none}
+.wrap{max-width:760px;margin:80px auto;padding:22px;background:#fff;border-radius:20px;box-shadow:var(--shadow);text-align:center}
+.board{
+  margin:16px auto;display:grid;grid-template-columns:repeat(4, minmax(60px, 120px));gap:12px;justify-content:center
+}
+.card{
+  width:100%;aspect-ratio:1/1;border-radius:16px;display:grid;place-items:center;font-size:32px;
+  background:linear-gradient(135deg,#fff,#ffe7f2);border:2px solid #ffd1e6;cursor:pointer;transition:transform .2s
+}
+.card.revealed{background:white;border-color:#b5f5cf;transform:scale(1.02)}
+.stats{margin:8px 0;color:#6a4a6a}

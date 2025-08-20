@@ -1,0 +1,7 @@
+
+@import url('../style.css');
+.back{position:fixed;top:12px;left:12px;text-decoration:none}
+.wrap{max-width:720px;margin:80px auto;padding:22px;background:#fff;border-radius:20px;box-shadow:var(--shadow)}
+.game{display:grid;gap:16px}
+input{padding:10px;border-radius:12px;border:1px solid #ffd1e6;width:100%;margin:6px 0}
+#feedback,#fbAn{min-height:24px;font-weight:700}
