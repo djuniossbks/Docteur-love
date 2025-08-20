@@ -1,0 +1,6 @@
+
+@import url('../style.css');
+.back{position:fixed;top:12px;left:12px;text-decoration:none}
+.wrap{max-width:680px;margin:80px auto;padding:22px;background:#fff;border-radius:20px;box-shadow:var(--shadow)}
+.row{display:flex;gap:8px}
+.card{margin-top:14px;padding:16px;border-radius:16px;background:#fff9fc;border:1px dashed #ffd1e6}

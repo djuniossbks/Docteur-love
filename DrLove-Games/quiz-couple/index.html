@@ -1,0 +1,27 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Quiz Couples</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <a class="back" href="../index.html">← Retour</a>
+  <div class="wrap">
+    <h1>Quiz Couples 💘</h1>
+    <div id="qbox"></div>
+    <div class="controls">
+      <button id="next" class="btn">Suivant</button>
+      <span id="progress"></span>
+    </div>
+    <div id="end" class="end" hidden>
+      <h2>Score: <span id="score"></span> / <span id="total"></span></h2>
+      <p id="message"></p>
+      <button class="btn" onclick="location.reload()">Rejouer</button>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Horoscope Amoureux</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <a class="back" href="../index.html">← Retour</a>
+  <div class="wrap">
+    <h1>Horoscope Amoureux 🔮</h1>
+    <div class="row">
+      <select id="sign">
+        <option value="">Choisis ton signe</option>
+        <option>Bélier</option><option>Taureau</option><option>Gémeaux</option><option>Cancer</option>
+        <option>Lion</option><option>Vierge</option><option>Balance</option><option>Scorpion</option>
+        <option>Sagittaire</option><option>Capricorne</option><option>Verseau</option><option>Poissons</option>
+      </select>
+      <button class="btn" id="see">Voir</button>
+    </div>
+    <div id="card" class="card" hidden></div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

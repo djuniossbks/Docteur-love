@@ -1,0 +1,11 @@
+
+@import url('../style.css');
+.back{position:fixed;top:12px;left:12px;text-decoration:none}
+.wrap{max-width:760px;margin:80px auto;padding:22px;background:#fff;border-radius:20px;box-shadow:var(--shadow)}
+h1{margin-top:0}
+.q{margin:14px 0;padding:14px;border:1px dashed var(--pink);border-radius:14px;background:#fff8fb}
+label{display:block;margin:8px 0;cursor:pointer}
+.btn{margin-top:10px}
+.result{text-align:center;margin-top:16px}
+.percent{font-size:56px;font-weight:900;background:linear-gradient(135deg,var(--rose),var(--red));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
