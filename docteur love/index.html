@@ -357,7 +357,7 @@
     
     
     
-    <div class="card">
+    <div class="card" data-link="DrLove-Games/index.html">
   <img src="https://img.freepik.com/premium-photo/3d-cartoon-character-couple-home-playing-video-games_1029473-670060.jpg" alt="Mini jeux Docteur Love">
   <h3>Mini jeux</h3>
   <p>Amusez-vous avec nos jeux romantiques : compatibilité, quiz, roulette des défis et plus encore ❤️</p>
@@ -372,42 +372,42 @@
         <div class="container">
             <h2>Astuces Couples et Amoureux 💑</h2>
             <div class="tips-grid">
-                <div class="card">
+                <div class="card" data-link="friendzone.html">
                     <img src="https://thumbs.dreamstime.com/b/opera-senza-titolo-sad-boy-feeling-love-pretty-girl-think-s-just-friend-friendzone-concept-266859455.jpg" alt="Friendzone">
                     <h3>Sortir de la Friendzone</h3>
                     <p>Elle te considère comme un ami ? Mais toi tu veux plus 😏. Pas de panique, Docteur Love a la potion magique !</p>
                 </div>
-                <div class="card">
+                <div class="card" data-link="avouer.html">
                     <img src="https://thumbs.dreamstime.com/b/vector-cartoon-man-boy-love-giving-big-romantic-red-heart-to-woman-girl-stick-figure-drawing-conceptual-illustration-bog-150887013.jpg" alt="Avouer ses sentiments">
                     <h3>Avouer ses sentiments</h3>
                     <p>Les mots bloquent ? Respire, souris, et laisse parler ton cœur 💌.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-link="confiance.html">
                     <img src="https://static.vecteezy.com/ti/vecteur-libre/p1/6046111-amour-vous-meme-concept-illustrationle-idee-pour-landing-page-template-happy-self-love-hug-estime-ego-confidence-body-acceptance-as-fier-and-careing-positive-attitude-style-plat-dessine-a-la-main-vectoriel.jpg" alt="Confiance en soi">
                     <h3>La confiance en soi</h3>
                     <p>Parce qu’avant d’aimer les autres, il faut s’aimer soi-même 💪❤️.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-link="mots.html">
                     <img src="https://thumbs.dreamstime.com/b/heart-made-words-love-vector-illustration-52799303.jpg" alt="Mots d'amour">
                     <h3>Mots d’amour</h3>
                     <p>Des phrases sucrées à offrir sans modération 🍯 « Tu es ma wifi, sans toi je capte rien » 😂.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-link="mariage.html">
                     <img src="docteur love/415829-PEE99Q-940.jpg" alt="Demande en mariage">
                     <h3>Demande en mariage</h3>
                     <p>Du fun, du romantisme, et un genou à terre 💍✨. Oui, elle dira OUI !</p>
                 </div>
-                <div class="card">
+                <div class="card" data-link="date.html">
                     <img src="https://us.123rf.com/450wm/austler/austler2404/austler240403521/229658762-couple-amoureux-boire-du-caf%C3%A9-dans-une-illustration-vectorielle-de-caf%C3%A9.jpg?ver=6" alt="Premier rendez-vous">
                     <h3>Réussir son premier date</h3>
                     <p>Pas besoin de jouer James Bond 😎, reste toi-même et apporte ton plus beau sourire.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-link="flamme.html">
                     <img src="https://image.jimcdn.com/app/cms/image/transf/dimension%3D435x1024%3Aformat%3Djpg/path/sc240ceab5c7a9cf5/image/i5880fc9e412f43ab/version/1708971171/comment-raviver-la-flamme-dans-un-mariage.jpg" alt="Raviver la flamme">
                     <h3>Raviver la flamme</h3>
                     <p>Les papillons reviennent quand on ose surprendre son/sa partenaire ✨.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-link="attentions.html">
                     <img src="docteur love/8xis_dsy8_230421.jpg" alt="Petites attentions">
                     <h3>Petites attentions</h3>
                     <p>Un mot doux sur l’oreiller, une blague le matin, ça change tout 💕.</p>
@@ -462,6 +462,17 @@
       }
     }
     window.onload = createHearts;
+
+// rendre chaque card cliquable vers la page définie
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("click", () => {
+    const link = card.getAttribute("data-link");
+    if(link){
+      window.location.href = link;
+    }
+  });
+});
+
   </script>
 </body>
 </html>
